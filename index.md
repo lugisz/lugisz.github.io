@@ -1,3 +1,3 @@
-# [Your name]'s Portfolio
+# LUGISZ Portfolio
 
 Welcome! Work in progress.
