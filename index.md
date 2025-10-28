@@ -1,3 +1,3 @@
-# LUGISZ Portfolio
+# Lugisz Portfolio
 
 Welcome! Work in progress.
