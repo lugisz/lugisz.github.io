@@ -14,41 +14,26 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.11"
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
+          python-version: "3.12"
+          cache: pip
+      - run: 
           pip install -r requirements.txt
-
-      - name: Debug file structure
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Files in repository:"
-          ls -la
-          echo "Checking for markdown and notebook files:"
-          find . -name "*.md" -o -name "*.ipynb"
-          echo "Checking for _toc.yml and _config.yml:"
-          find . -name "_toc.yml" -o -name "_config.yml"
+          
 
       - name: Build the book
         run: |
-          jupyter-book build --verbose .
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+          jupyter-book build .
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "_build/html"
+          path: _build/html
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
