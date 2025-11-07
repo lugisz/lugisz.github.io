@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Calculate Mean, Median, Mode and create Visualization using built in fucntion &#8212; Lugisz Portfolio</title>
+    <title>Calculate Mean, Median, Mode and create Visualization using built in function &#8212; Lugisz Portfolio</title>
   
   
   
@@ -314,7 +314,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Calculate Mean, Median, Mode and create Visualization using built in fucntion</h1>
+    <h1>Calculate Mean, Median, Mode and create Visualization using built in function</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -324,23 +324,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data-using-pandas">Importing Data using pandas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-need-this-as-comparison-with-the-result-from-calculating-it-the-hard-way-below">We need this as comparison with the result from calculating it “the hard way” below</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-1-460-286-rows">Chunking the data from 2020 - 2025 because the data is too big (1,460,286 rows)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#also-for-a-better-comparison-with-the-hard-way-calculation">(also for a better comparison with the hard way calculation)</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data-using-pandas">Importing Data using pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows">Chunking the data from 2020 - 2025 because the data is too big, as it has 1,460,286 rows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics-using-pandas">Statistics using pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-statistics-in-a-hard-way">Calculating the statistics in a hard way</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-look-at-the-number-of-row-in-pandas-dataframe-from-2020-2025-and-the-number-of-runners-in-the-hard-way-calculation-they-give-the-exact-same-number-therefore-we-can-assume-that-both-are-correct-using-the-same-data-for-the-respective-calculation">Note: Look at the number of row in pandas dataframe from 2020-2025 and the number of runners in the hard way calculation, they give the exact same number. Therefore, we can assume that both are correct (using the same data for the respective calculation)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-visualization">Simple Visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-heart-to-illustrate-age-is-inspired-from-game-a-game-usually-illustrate-character-s-live-using-heart-symbol">Choosing heart to illustrate age is inspired from game. A game usually illustrate character’s live using heart symbol.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-statistics-in-a-hard-way">Calculating the statistics in a hard way</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-visualization">Simple Visualization</a></li>
 </ul>
             </nav>
         </div>
@@ -352,13 +340,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="calculate-mean-median-mode-and-create-visualization-using-built-in-fucntion">
-<h1>Calculate Mean, Median, Mode and create Visualization using built in fucntion<a class="headerlink" href="#calculate-mean-median-mode-and-create-visualization-using-built-in-fucntion" title="Link to this heading">#</a></h1>
-<section id="importing-data-using-pandas">
+  <section class="tex2jax_ignore mathjax_ignore" id="calculate-mean-median-mode-and-create-visualization-using-built-in-function">
+<h1>Calculate Mean, Median, Mode and create Visualization using built in function<a class="headerlink" href="#calculate-mean-median-mode-and-create-visualization-using-built-in-function" title="Link to this heading">#</a></h1>
+<p> In this project, I use the data from NYC Marathon to calculate the basic statistic from the runner's age. Initially, I use panda for the sake of convenience. Later on, I will only use the built in libraries to calculate it. In addition, I also create a simple visualization using built in libraries too. </p><section id="importing-data-using-pandas">
 <h2>Importing Data using pandas<a class="headerlink" href="#importing-data-using-pandas" title="Link to this heading">#</a></h2>
-<section id="we-need-this-as-comparison-with-the-result-from-calculating-it-the-hard-way-below">
-<h3>We need this as comparison with the result from calculating it “the hard way” below<a class="headerlink" href="#we-need-this-as-comparison-with-the-result-from-calculating-it-the-hard-way-below" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
+<p> We need this as comparison with the result from calculating it "the hard way" below. </p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
@@ -548,12 +534,9 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-</section>
-<section id="chunking-the-data-from-2020-2025-because-the-data-is-too-big-1-460-286-rows">
-<h2>Chunking the data from 2020 - 2025 because the data is too big (1,460,286 rows)<a class="headerlink" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-1-460-286-rows" title="Link to this heading">#</a></h2>
-<section id="also-for-a-better-comparison-with-the-hard-way-calculation">
-<h3>(also for a better comparison with the hard way calculation)<a class="headerlink" href="#also-for-a-better-comparison-with-the-hard-way-calculation" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
+<section id="chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows">
+<h2>Chunking the data from 2020 - 2025 because the data is too big, as it has 1,460,286 rows<a class="headerlink" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows" title="Link to this heading">#</a></h2>
+<p>(also for a better comparison with the hard way calculation)</p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_marathon</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)]</span>
 <span class="n">nyc_marathon</span>
@@ -741,7 +724,6 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-</section>
 <section id="statistics-using-pandas">
 <h2>Statistics using pandas<a class="headerlink" href="#statistics-using-pandas" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -863,10 +845,7 @@ Mode Age: 30 years (appeared 6044 times)
 </div>
 </div>
 </div>
-<section id="note-look-at-the-number-of-row-in-pandas-dataframe-from-2020-2025-and-the-number-of-runners-in-the-hard-way-calculation-they-give-the-exact-same-number-therefore-we-can-assume-that-both-are-correct-using-the-same-data-for-the-respective-calculation">
-<h3>Note: Look at the number of row in pandas dataframe from 2020-2025 and the number of runners in the hard way calculation, they give the exact same number. Therefore, we can assume that both are correct (using the same data for the respective calculation)<a class="headerlink" href="#note-look-at-the-number-of-row-in-pandas-dataframe-from-2020-2025-and-the-number-of-runners-in-the-hard-way-calculation-they-give-the-exact-same-number-therefore-we-can-assume-that-both-are-correct-using-the-same-data-for-the-respective-calculation" title="Link to this heading">#</a></h3>
-</section>
-</section>
+<p>Note: <br> Look at the number of row in pandas dataframe from 2020-2025 and the number of runners in the hard way calculation, they give the exact same number. Therefore, we can assume that both are correct (using the same data for the respective calculation)</p></section>
 <section id="simple-visualization">
 <h2>Simple Visualization<a class="headerlink" href="#simple-visualization" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -902,10 +881,7 @@ Mode   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️�
 </div>
 </div>
 </div>
-<section id="choosing-heart-to-illustrate-age-is-inspired-from-game-a-game-usually-illustrate-character-s-live-using-heart-symbol">
-<h3>Choosing heart to illustrate age is inspired from game. A game usually illustrate character’s live using heart symbol.<a class="headerlink" href="#choosing-heart-to-illustrate-age-is-inspired-from-game-a-game-usually-illustrate-character-s-live-using-heart-symbol" title="Link to this heading">#</a></h3>
-</section>
-</section>
+<p> Choosing heart to illustrate age is inspired from game. A game usually illustrate character's live using heart symbol. </p></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -963,23 +939,11 @@ Mode   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️�
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data-using-pandas">Importing Data using pandas</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#we-need-this-as-comparison-with-the-result-from-calculating-it-the-hard-way-below">We need this as comparison with the result from calculating it “the hard way” below</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-1-460-286-rows">Chunking the data from 2020 - 2025 because the data is too big (1,460,286 rows)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#also-for-a-better-comparison-with-the-hard-way-calculation">(also for a better comparison with the hard way calculation)</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data-using-pandas">Importing Data using pandas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows">Chunking the data from 2020 - 2025 because the data is too big, as it has 1,460,286 rows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics-using-pandas">Statistics using pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-statistics-in-a-hard-way">Calculating the statistics in a hard way</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note-look-at-the-number-of-row-in-pandas-dataframe-from-2020-2025-and-the-number-of-runners-in-the-hard-way-calculation-they-give-the-exact-same-number-therefore-we-can-assume-that-both-are-correct-using-the-same-data-for-the-respective-calculation">Note: Look at the number of row in pandas dataframe from 2020-2025 and the number of runners in the hard way calculation, they give the exact same number. Therefore, we can assume that both are correct (using the same data for the respective calculation)</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-visualization">Simple Visualization</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choosing-heart-to-illustrate-age-is-inspired-from-game-a-game-usually-illustrate-character-s-live-using-heart-symbol">Choosing heart to illustrate age is inspired from game. A game usually illustrate character’s live using heart symbol.</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-statistics-in-a-hard-way">Calculating the statistics in a hard way</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-visualization">Simple Visualization</a></li>
 </ul>
   </nav></div>
 
