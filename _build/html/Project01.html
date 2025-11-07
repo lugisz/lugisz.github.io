@@ -325,7 +325,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data-using-pandas">Importing Data using pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows">Chunking the data from 2020 - 2025 because the data is too big, as it has 1,460,286 rows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025">Chunking the data from 2020 - 2025</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics-using-pandas">Statistics using pandas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-statistics-in-a-hard-way">Calculating the statistics in a hard way</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-visualization">Simple Visualization</a></li>
@@ -342,7 +342,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="calculate-mean-median-mode-and-create-visualization-using-built-in-function">
 <h1>Calculate Mean, Median, Mode and create Visualization using built in function<a class="headerlink" href="#calculate-mean-median-mode-and-create-visualization-using-built-in-function" title="Link to this heading">#</a></h1>
-<p> In this project, I use the data from NYC Marathon to calculate the basic statistic from the runner's age. Initially, I use panda for the sake of convenience. Later on, I will only use the built in libraries to calculate it. In addition, I also create a simple visualization using built in libraries too. </p><section id="importing-data-using-pandas">
+<p> In this project, I use the data from NYC Marathon to calculate the basic statistic from the runner's age. Initially, I use panda for the sake of convenience. Later on, I will only use the built in libraries to calculate it. In addition, I also create a simple visualization using built in libraries too. The intention for this project is to show the power of pandas. It simplifies the complex task into just a line of code</p><section id="importing-data-using-pandas">
 <h2>Importing Data using pandas<a class="headerlink" href="#importing-data-using-pandas" title="Link to this heading">#</a></h2>
 <p> We need this as comparison with the result from calculating it "the hard way" below. </p><div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -534,9 +534,9 @@ document.write(`
 </div></div></div>
 </div>
 </section>
-<section id="chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows">
-<h2>Chunking the data from 2020 - 2025 because the data is too big, as it has 1,460,286 rows<a class="headerlink" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows" title="Link to this heading">#</a></h2>
-<p>(also for a better comparison with the hard way calculation)</p><div class="cell docutils container">
+<section id="chunking-the-data-from-2020-2025">
+<h2>Chunking the data from 2020 - 2025<a class="headerlink" href="#chunking-the-data-from-2020-2025" title="Link to this heading">#</a></h2>
+<p> Because the data is too big, as it has 1,460,286 rows, we need to slice/chunk it into smaller data. We need this for a better comparison with the hard way calculation below. The hard way calculation cannot handle this massive rows, especially for Mode calculation, because to compute mode the machine needs to store all the number and append it to get the most frequent one. It's impossible to do that manually for 1.4 million times</p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_marathon</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">between</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2025</span><span class="p">)]</span>
 <span class="n">nyc_marathon</span>
@@ -751,7 +751,7 @@ Mode Age: 30 years
 </section>
 <section id="calculating-the-statistics-in-a-hard-way">
 <h2>Calculating the statistics in a hard way<a class="headerlink" href="#calculating-the-statistics-in-a-hard-way" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<p> As I've mentioned before, pandas is a powerfull libraries. We can see below that computing such simple tasks as mean, median, mode manually requires many lines of code. Whereas using pandas, we only need 1 line for each calculation.</p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
@@ -848,7 +848,7 @@ Mode Age: 30 years (appeared 6044 times)
 <p>Note: <br> Look at the number of row in pandas dataframe from 2020-2025 and the number of runners in the hard way calculation, they give the exact same number. Therefore, we can assume that both are correct (using the same data for the respective calculation)</p></section>
 <section id="simple-visualization">
 <h2>Simple Visualization<a class="headerlink" href="#simple-visualization" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
+<p> This is alo an evidence of the power of a Python Library called plotly. Without it, visualizing something is rather hard to do. Thereore, here I can just visualize the Mean, Median, and Mode using a simple method of printing ❤️ times the age number. </p><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # Round the calculated ages to the nearest whole number</span>
 <span class="n">rounded_mean</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">mean_age</span><span class="p">)</span>
@@ -940,7 +940,7 @@ Mode   ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️�
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing-data-using-pandas">Importing Data using pandas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025-because-the-data-is-too-big-as-it-has-1-460-286-rows">Chunking the data from 2020 - 2025 because the data is too big, as it has 1,460,286 rows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chunking-the-data-from-2020-2025">Chunking the data from 2020 - 2025</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#statistics-using-pandas">Statistics using pandas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-the-statistics-in-a-hard-way">Calculating the statistics in a hard way</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-visualization">Simple Visualization</a></li>

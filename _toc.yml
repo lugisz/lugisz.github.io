@@ -2,4 +2,6 @@ format: jb-book
 root: index.md
 chapters:
   - file: lecture_16_example.ipynb
+    title: Lecture 16 Example
   - file: Project01.ipynb
+    title: Calculate Mean, Median, Mode and create Visualization using built in function
