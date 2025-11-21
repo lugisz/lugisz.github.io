@@ -5,8 +5,7 @@ Welcome to my project site.
 Herewith lies some of my projects. Most of it are python projects which I do on my course in data analytic.
 Feel free to check it!
 Any suggestions are welcome.
-
-<br>Twitter: [@lugisz](https://x.com/lugisz)</br>
-<br>LinkedIn: [Lugis Andrianto](https://www.linkedin.com/in/lugisz/)</br>
+1. Twitter: [@lugisz](https://x.com/lugisz)
+2. LinkedIn: [Lugis Andrianto](https://www.linkedin.com/in/lugisz/)
 
 Check out the projects in the navigation menu!
