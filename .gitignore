@@ -5,6 +5,7 @@ _build/
 # make sure Labs aren't included
 Lab*.ipynb
 lab*.ipynb
+lecture_16_example.ipynb
 
 # virtual environments
 .venv/
