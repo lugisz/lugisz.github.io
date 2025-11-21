@@ -4,4 +4,6 @@ chapters:
   - file: lecture_16_example.ipynb
     title: Lecture 16 Example
   - file: Project01.ipynb
-    title: Project 01 
+    title: Project 01 - Calculate Mean, Median, Mode and create Visualization using built in function
+  - file: Project02.ipynb
+    title: Project 02 - The Price of Life – Analyzing the Efficiency of Global Healthcare Spending     
