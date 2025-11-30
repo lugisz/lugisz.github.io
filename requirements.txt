@@ -1,6 +1,8 @@
 ipykernel
 pandas
 plotly
+lxml
+requests
 
 # needed for plotly
 nbformat
